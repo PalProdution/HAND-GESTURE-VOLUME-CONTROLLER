@@ -72,3 +72,4 @@ while True:
 cap.release()  # stop cam
 cv2.destroyAllWindows()  # close window
 '''CLICK SPACE BAR IN ORDER TO STOP THE PROGRAM'''
+#all done rdy to use
