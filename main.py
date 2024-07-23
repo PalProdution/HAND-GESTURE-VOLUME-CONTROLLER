@@ -25,7 +25,7 @@ volMin, volMax = volume.GetVolumeRange()[:2]
 while True:
     success, img = cap.read()  # If camera works capture an image
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # Convert to rgb
-
+#problem in phycharm interpreture problem
     # Collection of gesture information
     results = hands.process(imgRGB)  # completes the image processing. 
     lmList = []  # empty list
