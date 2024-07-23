@@ -57,3 +57,18 @@ while True:
 
         print(vol, int(length))
         volume.SetMasterVolumeLevel(vol, None)
+         # Hand range 30 - 350
+        # Volume range -63.5 - 0.0
+        # creating volume bar for volume level
+        cv2.rectangle(img, (50, 150), (85, 400), (0, 0, 255),
+                      4)  # vid ,initial position ,ending position ,rgb ,thickness
+        cv2.rectangle(img, (50, int(volbar)), (85, 400), (0, 0, 255), cv2.FILLED)
+        cv2.putText(img, f"{int(volper)}%", (10, 40), cv2.FONT_ITALIC, 1, (0, 255, 98), 3)
+        # tell the volume percentage ,location,font of text,length,rgb color,thickness
+    cv2.imshow('Image', img)  # Show the video
+    if cv2.waitKey(1) & 0xff == ord(' '):  # By using spacebar delay will stop
+        break
+
+cap.release()  # stop cam
+cv2.destroyAllWindows()  # close window
+'''CLICK SPACE BAR IN ORDER TO STOP THE PROGRAM'''
